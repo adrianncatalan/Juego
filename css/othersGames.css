@@ -1,0 +1,34 @@
+section{
+    margin-top:4em;
+}
+
+#juegos1{
+    display: flex;
+    justify-content: center;
+}
+
+#juegos2{
+    display: flex;
+    justify-content: center;
+    margin-top: 8em;
+}
+
+.box{
+    width: 25em;
+    height: 25em;
+    background: cadetblue;
+    margin: 2em;
+    border: 5px solid white;
+    margin-top: 0.5em;
+}
+
+.box a img{
+    width: 25em;
+    height: 25em;
+}
+
+.box p{
+    color: white;
+    font-size: 2em;
+    font-family: "QualyBold.ttf" ,sans-serif;
+}

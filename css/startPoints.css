@@ -1,0 +1,12 @@
+#castillo{
+    width: 6.2em;
+    height: 6.3em;
+    position: absolute;
+    bottom: 0;
+}
+
+#casa{
+    position: absolute;
+    width: 6em;
+    top: 0;
+}

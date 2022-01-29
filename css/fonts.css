@@ -1,0 +1,44 @@
+@font-face{
+    font-family: "Comfortaa-Bold.ttf";
+    src: url("/fonts/Comfortaa-Bold.ttf");
+}
+
+@font-face{
+    font-family: "Comfortaa-Light.ttf";
+    src: url("/fonts/Comfortaa-Light.ttf");
+}
+
+@font-face{
+    font-family: "Comfortaa-Regular.ttf";
+    src: url("/fonts/Comfortaa-Regular.ttf");
+}
+
+@font-face{
+    font-family: "White On Black.ttf";
+    src: url("/fonts/White\ On\ Black.ttf");
+}
+
+@font-face{
+    font-family: "aceroSangre.otf";
+    src: url("/fonts/AceroSangre.otf");
+}
+
+@font-face{
+    font-family: "QualyBold.ttf";
+    src: url("/fonts/QualyBold.ttf");
+}
+
+@font-face{
+    font-family: "Urban.ttf";
+    src: url("/fonts/Urban.ttf");
+}
+
+@font-face{
+    font-family: "Carton.ttf";
+    src: url("/fonts/Carton.ttf");
+}
+
+@font-face{
+    font-family: "Giants.ttf";
+    src: url("/fonts/Giants.ttf");
+}

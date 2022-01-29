@@ -1,0 +1,20 @@
+#jugador{
+    width: 6em;
+    height: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+#monstruo{
+    width: 6em;
+    height: auto;
+    position: absolute;
+    left: 0;
+    top: 43.7em;
+    bottom: 0;
+    right: 0;
+    transform: scaleX(-1);
+}

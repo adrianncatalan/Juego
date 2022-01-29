@@ -1,0 +1,25 @@
+#piedra{
+    width: 100px;
+    height: auto;
+    position: absolute;
+}
+
+.piedra1{
+    top: 0.3em;
+}
+
+.piedra2{
+    top: 12.5em;
+}
+
+.piedra3{
+    top:18.6em;
+}
+
+.piedra4{
+    top: 24.9em;
+}
+
+.piedra5{
+    top: 31em;
+}

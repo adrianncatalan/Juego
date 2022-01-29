@@ -1,0 +1,36 @@
+#mainStart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#mainStart > h1{
+    font-family: "White On Black.ttf", sans-serif;
+    color: crimson;
+    font-size: 7em;
+    text-shadow: 5px 5px 5px white;
+}
+
+#mainStart > nav >  ul {
+    display: flex;
+    list-style: none;
+    font-size: 2.5em;
+    justify-content: center;
+}
+
+#mainStart > nav >  ul > li {
+    margin-right: 3em;
+}
+
+#mainStart > nav > ul > li > a {
+    text-decoration: none;
+    font-family: "QualyBold.ttf" ,sans-serif;
+    color: white;
+}
+
+#mainStart > nav > ul > li > a:hover {
+    padding-left: 0.2em;
+    color: crimson;
+    transition: 0.3s ease;
+    text-shadow: 2px 2px 2px white; 
+}
