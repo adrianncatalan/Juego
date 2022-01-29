@@ -1,12 +1,11 @@
 footer { 
     background-color: #2f2f2f;
     display: flex;
-    height: 15%;
+    height: 10em;
     justify-content: space-around;
     color: white;
     padding-bottom: 0.5em;
     opacity: 0.7;
-    position: absolute;
     bottom: 0;
     width: 100%;
 }
@@ -17,5 +16,5 @@ footer {
     color: white;
     font-weight: bolder;
     font-family: "QualyBold.ttf";
-    margin-top: 3.5rem;
+    margin-top: 4rem;
 }

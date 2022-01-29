@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juego: El robo de los exámenes</title>
     <link rel="stylesheet" href="/css/commonsStart.css">
-    <script src="/js/scriptMoverJug.js"></script>
-    <script src="/js/scriptMoverMons.js"></script>
+    <script src="/js/scriptMoverJugMons.js"></script>
+    <script src="/js/scriptExamsAleatorio.js"></script>
+    <script src="/js/scriptMonsAleatorio.js"></script>
+    <script src="/js/scriptPosJug.js"></script>
 </head>
 
 <body>
@@ -18,7 +20,7 @@
         <nav>
             <ul>
                 <li>
-                    <a href="/html/start.html">Inicio</a>
+                    <a href="/index.html">Inicio</a>
                 </li>
                 <li>
                     <a href="#">Opciones</a>
@@ -74,9 +76,9 @@
                 <td></td>
             </tr>
             <tr>
+                <td id="papitoExam"><img id="examenes" src="/img/examenes.png" alt=""></td>
                 <td></td>
                 <td></td>
-                <td><img id="examenes" src="/img/examenes.png" alt=""></td>
                 <td></td>
                 <td><img id="piedra" class="piedra4" src="/img/piedra.png" alt=""></td>
                 <td><img id="arbusto" class="arbusto3" src="/img/arbusto.png" alt=""></td>
@@ -104,14 +106,14 @@
                 <td></td>
             </tr>
             <tr>
-                <td><img id="castillo" src="/img/castillo.jpg" alt=""></td>
-                <td><img id="monstruo" src="/img/monstruo.gif" alt=""></td>
+                <td><img id="castillo" src="/img/castillo.jpg" alt=""><img id="monstruo" src="/img/monstruo.gif" alt=""></td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td><img id="puerta" src="/img/puerta.png" alt=""></td>
+                <td></td>
+                <td id="puertaPadre"><img id="puertaCerrada" src="/img/puerta.png" alt=""></td>
             </tr>
         </table>
 
