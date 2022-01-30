@@ -22,6 +22,8 @@ window.onload = () => {
 
     //--------------------------------------------------------------------------
 
+    var salir;
+
     function moverDerecha() {
 
         var jugador = document.getElementById('jugador');
@@ -84,16 +86,6 @@ window.onload = () => {
 
         var coordExamenes = [coordIzqExams, coordDereExams, coordArrExams, coordAbaExams];
 
-        // console.log(coordJugador[0])
-        // console.log(coordJugador[1])
-        // console.log(coordJugador[2])
-        // console.log(coordJugador[3])
-        // console.log("------------")
-        // console.log(coordExamenes[0])
-        // console.log(coordExamenes[1])
-        // console.log(coordExamenes[2])
-        // console.log(coordExamenes[3])
-
         //--------------------------------------------------------------------------
 
         if (coordIzqJug + anchuraJugador <= anchuraTablero - mover) {
@@ -114,7 +106,17 @@ window.onload = () => {
 
                 btnGroup.style.setProperty('visibility', 'hidden');
 
-                gameOver.addEventListener('click', () => {
+                var contenedorTablero = document.getElementById('contenedorTablero');
+
+                var btnReset = document.createElement('button');
+
+                btnReset.innerHTML = 'Volver a jugar';
+
+                btnReset.className = 'btnReset';
+
+                contenedorTablero.append(btnReset);
+
+                btnReset.addEventListener('click', () => {
 
                     window.location.reload();
 
@@ -128,11 +130,18 @@ window.onload = () => {
 
         }
 
-        if (coordIzqMons + anchuraMonstruo <= anchuraTablero - mover) {
+        //Monstruo mueve hacia arriba
+        if (coordArrMons > 1) {
 
-            monstruo.style.setProperty('left', (coordIzqMons + mover) + 'px');
+            monstruo.style.setProperty('top', (coordArrMons - mover) + 'px');
 
         }
+
+        var puertaPadre = document.getElementById('puertaPadre');
+
+        var puertaCerrada = document.getElementById('puertaCerrada');
+
+        var puertaAbierta = document.createElement('img');
 
         if (coordJugador[0] == coordExamenes[0] && coordJugador[1] == coordExamenes[1] && coordJugador[2] == coordExamenes[2] && coordJugador[3] == coordExamenes[3]) {
 
@@ -142,17 +151,49 @@ window.onload = () => {
 
             document.body.prepend(examenes);
 
-            var puertaPadre = document.getElementById('puertaPadre');
-
-            var puertaCerrada = document.getElementById('puertaCerrada');
-
-            var puertaAbierta = document.createElement('img');
-
             puertaAbierta.className = 'puertaAbierta'
 
             puertaAbierta.src = "/img/puertaAbierta.jpg";
 
             puertaPadre.replaceChild(puertaAbierta, puertaCerrada);
+
+            salir = true;
+
+        }
+
+        if (salir) {
+
+            if (coordJugador[0] == 600 && coordJugador[1] == 0 && coordJugador[2] == 700 && coordJugador[3] == 0) {
+
+                var youWin = document.createElement('img');
+
+                youWin.className = 'youWin';
+
+                youWin.src = '/img/youWin.gif'
+
+                document.body.prepend(youWin);
+
+                var btnGroup = document.getElementById('btnGroup');
+
+                btnGroup.style.setProperty('visibility', 'hidden');
+
+                var contenedorTablero = document.getElementById('contenedorTablero');
+
+                var btnReset = document.createElement('button');
+
+                btnReset.innerHTML = 'Volver a jugar';
+
+                btnReset.className = 'btnReset';
+
+                contenedorTablero.append(btnReset);
+
+                btnReset.addEventListener('click', () => {
+
+                    window.location.reload();
+
+                });
+
+            }
 
         }
 
@@ -234,7 +275,17 @@ window.onload = () => {
 
                 btnGroup.style.setProperty('visibility', 'hidden');
 
-                gameOver.addEventListener('click', () => {
+                var contenedorTablero = document.getElementById('contenedorTablero');
+
+                var btnReset = document.createElement('button');
+
+                btnReset.innerHTML = 'Volver a jugar';
+
+                btnReset.className = 'btnReset';
+
+                contenedorTablero.append(btnReset);
+
+                btnReset.addEventListener('click', () => {
 
                     window.location.reload();
 
@@ -248,9 +299,10 @@ window.onload = () => {
 
         }
 
-        if (coordIzqMons >= 1) {
+        //Monstruo mueve hacia abajo
+        if (coordArrMons + anchuraMonstruo < anchuraTablero - mover) {
 
-            monstruo.style.setProperty('left', (coordIzqMons - mover) + 'px');
+            monstruo.style.setProperty('top', (coordArrMons + mover) + 'px');
 
         }
 
@@ -277,6 +329,8 @@ window.onload = () => {
         }
 
     }
+
+    
 
     function moverAbajo() {
 
@@ -358,7 +412,17 @@ window.onload = () => {
 
                 btnGroup.style.setProperty('visibility', 'hidden');
 
-                gameOver.addEventListener('click', () => {
+                var contenedorTablero = document.getElementById('contenedorTablero');
+
+                var btnReset = document.createElement('button');
+
+                btnReset.innerHTML = 'Volver a jugar';
+
+                btnReset.className = 'btnReset';
+
+                contenedorTablero.append(btnReset);
+
+                btnReset.addEventListener('click', () => {
 
                     window.location.reload();
 
@@ -372,11 +436,20 @@ window.onload = () => {
 
         }
 
-        if (coordArrMons + anchuraMonstruo < anchuraTablero - mover) {
+        //Monstruo mueve hacia a la izquierda
+        if (coordIzqMons >= 1) {
 
-            monstruo.style.setProperty('top', (coordArrMons + mover) + 'px');
+            monstruo.style.setProperty('left', (coordIzqMons - mover) + 'px');
 
         }
+
+        var puertaPadre = document.getElementById('puertaPadre');
+
+        var puertaCerrada = document.getElementById('puertaCerrada');
+
+        var puertaAbierta = document.createElement('img');
+
+
 
         if (coordJugador[0] == coordExamenes[0] && coordJugador[1] == coordExamenes[1] && coordJugador[2] == coordExamenes[2] && coordJugador[3] == coordExamenes[3]) {
 
@@ -386,17 +459,53 @@ window.onload = () => {
 
             document.body.prepend(examenes);
 
-            var puertaPadre = document.getElementById('puertaPadre');
-
-            var puertaCerrada = document.getElementById('puertaCerrada');
-
-            var puertaAbierta = document.createElement('img');
-
             puertaAbierta.className = 'puertaAbierta'
 
             puertaAbierta.src = "/img/puertaAbierta.jpg";
 
             puertaPadre.replaceChild(puertaAbierta, puertaCerrada);
+
+            salir = true;
+
+            console.log(salir)
+
+        }
+
+        console.log(salir)
+
+        if (salir) {
+
+            if (coordJugador[0] == 700 && coordJugador[1] == 0 && coordJugador[2] == 600 && coordJugador[3] == 0) {
+
+                var youWin = document.createElement('img');
+
+                youWin.className = 'youWin';
+
+                youWin.src = '/img/youWin.gif'
+
+                document.body.prepend(youWin);
+
+                var btnGroup = document.getElementById('btnGroup');
+
+                btnGroup.style.setProperty('visibility', 'hidden');
+
+                var contenedorTablero = document.getElementById('contenedorTablero');
+
+                var btnReset = document.createElement('button');
+
+                btnReset.innerHTML = 'Volver a jugar';
+
+                btnReset.className = 'btnReset';
+
+                contenedorTablero.append(btnReset);
+
+                btnReset.addEventListener('click', () => {
+
+                    window.location.reload();
+
+                });
+
+            }
 
         }
 
@@ -480,7 +589,17 @@ window.onload = () => {
 
                 btnGroup.style.setProperty('visibility', 'hidden');
 
-                gameOver.addEventListener('click', () => {
+                var contenedorTablero = document.getElementById('contenedorTablero');
+
+                var btnReset = document.createElement('button');
+
+                btnReset.innerHTML = 'Volver a jugar';
+
+                btnReset.className = 'btnReset';
+
+                contenedorTablero.append(btnReset);
+
+                btnReset.addEventListener('click', () => {
 
                     window.location.reload();
 
@@ -494,9 +613,10 @@ window.onload = () => {
 
         }
 
-        if (coordArrMons > 1) {
+        //Monstruo mueve hacia la derecha
+        if (coordIzqMons + anchuraMonstruo <= anchuraTablero - mover) {
 
-            monstruo.style.setProperty('top', (coordArrMons - mover) + 'px');
+            monstruo.style.setProperty('left', (coordIzqMons + mover) + 'px');
 
         }
 
