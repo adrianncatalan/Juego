@@ -1,0 +1,72 @@
+body{
+    padding: 0;
+    margin: 0;
+    background: url("/img/fondoComoJugar.jpg") center center fixed no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+@font-face{
+    font-family: "QualyBold.ttf";
+    src: url("/fonts/QualyBold.ttf");
+}
+
+#historia{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    margin-top: 1.5em;
+}
+
+h1, p, h4, h2{
+    width: 40%;
+}
+
+h2{
+    text-align: center;
+    text-shadow: 1px 1px 1px black;
+}
+
+h1{
+    font-family: "White On Black.ttf", sans-serif;
+    color: crimson;
+    font-size: 5em;
+    text-shadow: 5px 5px 5px white; 
+}
+
+p{
+    font-size: 1.1em;
+    text-shadow: 1px 1px 1px black;
+}
+
+#volver{
+    margin-right: 25em;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#volver h3 a{
+    text-decoration: none;
+    color: white;
+}
+
+#volver h3 a input{
+    background-color: crimson;
+    color: white;
+    padding: 1em;
+    cursor: pointer;
+    font-family: sans-serif;
+    border: 2px solid #2f2f2f;
+    border-radius: 30px;
+}
+
+#volver h3 a input:hover{
+    background-color: crimson;
+    color: white;
+    padding: 1em;
+    background-color: green;
+    transition: 0.3s ease;
+}
+

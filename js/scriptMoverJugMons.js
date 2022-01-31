@@ -126,7 +126,7 @@ window.onload = () => {
 
         } else {
 
-            console.log("Estas chocando con la pared")
+            console.log("Estas chocando con la pared.");
 
         }
 
@@ -145,11 +145,39 @@ window.onload = () => {
 
         if (coordJugador[0] == coordExamenes[0] && coordJugador[1] == coordExamenes[1] && coordJugador[2] == coordExamenes[2] && coordJugador[3] == coordExamenes[3]) {
 
-            examenes.style.setProperty('left', (30) + "%");
+            var tomarExamenes = document.createElement('img');
 
-            examenes.style.setProperty('top', (30) + "%");
+            tomarExamenes.className = 'tomarExamenes';
 
-            document.body.prepend(examenes);
+            tomarExamenes.src = '/img/salir.gif'
+
+            document.body.prepend(tomarExamenes);
+
+            examenes.style.display = 'none';
+
+            var btnGroup = document.getElementById('btnGroup');
+
+            btnGroup.style.setProperty('visibility', 'hidden');
+
+            var contenedorTablero = document.getElementById('contenedorTablero');
+
+            var btnsalida = document.createElement('button');
+
+            btnsalida.className = 'btnSalida'
+
+            btnsalida.innerHTML = 'Ve a la salida';
+
+            contenedorTablero.append(btnsalida);
+
+            btnsalida.addEventListener('click', () => {
+
+                btnsalida.style.display = 'none';
+
+                tomarExamenes.style.display = 'none';
+
+                btnGroup.style.setProperty('visibility', 'visible');
+
+            });
 
             puertaAbierta.className = 'puertaAbierta'
 
@@ -306,19 +334,47 @@ window.onload = () => {
 
         }
 
+        var puertaPadre = document.getElementById('puertaPadre');
+
+        var puertaCerrada = document.getElementById('puertaCerrada');
+
+        var puertaAbierta = document.createElement('img');
+
         if (coordJugador[0] == coordExamenes[0] && coordJugador[1] == coordExamenes[1] && coordJugador[2] == coordExamenes[2] && coordJugador[3] == coordExamenes[3]) {
 
-            examenes.style.setProperty('left', (30) + "%");
+            var tomarExamenes = document.createElement('img');
 
-            examenes.style.setProperty('top', (30) + "%");
+            tomarExamenes.className = 'tomarExamenes';
 
-            document.body.prepend(examenes);
+            tomarExamenes.src = '/img/salir.gif'
 
-            var puertaPadre = document.getElementById('puertaPadre');
+            document.body.prepend(tomarExamenes);
 
-            var puertaCerrada = document.getElementById('puertaCerrada');
+            examenes.style.display = 'none';
 
-            var puertaAbierta = document.createElement('img');
+            var btnGroup = document.getElementById('btnGroup');
+
+            btnGroup.style.setProperty('visibility', 'hidden');
+
+            var contenedorTablero = document.getElementById('contenedorTablero');
+
+            var btnsalida = document.createElement('button');
+
+            btnsalida.className = 'btnSalida'
+
+            btnsalida.innerHTML = 'Ve a la salida';
+
+            contenedorTablero.append(btnsalida);
+
+            btnsalida.addEventListener('click', () => {
+
+                btnsalida.style.display = 'none';
+
+                tomarExamenes.style.display = 'none';
+
+                btnGroup.style.setProperty('visibility', 'visible');
+
+            });
 
             puertaAbierta.className = 'puertaAbierta'
 
@@ -326,11 +382,79 @@ window.onload = () => {
 
             puertaPadre.replaceChild(puertaAbierta, puertaCerrada);
 
+            salir = true;
+
+        }
+
+        if (salir) {
+
+            if (coordJugador[0] == 600 && coordJugador[1] == 0 && coordJugador[2] == 700 && coordJugador[3] == 0) {
+
+                var youWin = document.createElement('img');
+
+                youWin.className = 'youWin';
+
+                youWin.src = '/img/youWin.gif'
+
+                document.body.prepend(youWin);
+
+                var btnGroup = document.getElementById('btnGroup');
+
+                btnGroup.style.setProperty('visibility', 'hidden');
+
+                var contenedorTablero = document.getElementById('contenedorTablero');
+
+                var btnReset = document.createElement('button');
+
+                btnReset.innerHTML = 'Volver a jugar';
+
+                btnReset.className = 'btnReset';
+
+                contenedorTablero.append(btnReset);
+
+                btnReset.addEventListener('click', () => {
+
+                    window.location.reload();
+
+                });
+
+            } else if (coordJugador[0] == 700 && coordJugador[1] == 0 && coordJugador[2] == 600 && coordJugador[3] == 0) {
+
+                var youWin = document.createElement('img');
+
+                youWin.className = 'youWin';
+
+                youWin.src = '/img/youWin.gif'
+
+                document.body.prepend(youWin);
+
+                var btnGroup = document.getElementById('btnGroup');
+
+                btnGroup.style.setProperty('visibility', 'hidden');
+
+                var contenedorTablero = document.getElementById('contenedorTablero');
+
+                var btnReset = document.createElement('button');
+
+                btnReset.innerHTML = 'Volver a jugar';
+
+                btnReset.className = 'btnReset';
+
+                contenedorTablero.append(btnReset);
+
+                btnReset.addEventListener('click', () => {
+
+                    window.location.reload();
+
+                });
+
+            }
+
         }
 
     }
 
-    
+
 
     function moverAbajo() {
 
@@ -449,15 +573,41 @@ window.onload = () => {
 
         var puertaAbierta = document.createElement('img');
 
-
-
         if (coordJugador[0] == coordExamenes[0] && coordJugador[1] == coordExamenes[1] && coordJugador[2] == coordExamenes[2] && coordJugador[3] == coordExamenes[3]) {
 
-            examenes.style.setProperty('left', (30) + "%");
+            var tomarExamenes = document.createElement('img');
 
-            examenes.style.setProperty('top', (30) + "%");
+            tomarExamenes.className = 'tomarExamenes';
 
-            document.body.prepend(examenes);
+            tomarExamenes.src = '/img/salir.gif'
+
+            document.body.prepend(tomarExamenes);
+
+            examenes.style.display = 'none';
+
+            var btnGroup = document.getElementById('btnGroup');
+
+            btnGroup.style.setProperty('visibility', 'hidden');
+
+            var contenedorTablero = document.getElementById('contenedorTablero');
+
+            var btnsalida = document.createElement('button');
+
+            btnsalida.className = 'btnSalida'
+
+            btnsalida.innerHTML = 'Ve a la salida';
+
+            contenedorTablero.append(btnsalida);
+
+            btnsalida.addEventListener('click', () => {
+
+                btnsalida.style.display = 'none';
+
+                tomarExamenes.style.display = 'none';
+
+                btnGroup.style.setProperty('visibility', 'visible');
+
+            });
 
             puertaAbierta.className = 'puertaAbierta'
 
@@ -620,19 +770,47 @@ window.onload = () => {
 
         }
 
+        var puertaPadre = document.getElementById('puertaPadre');
+
+        var puertaCerrada = document.getElementById('puertaCerrada');
+
+        var puertaAbierta = document.createElement('img');
+
         if (coordJugador[0] == coordExamenes[0] && coordJugador[1] == coordExamenes[1] && coordJugador[2] == coordExamenes[2] && coordJugador[3] == coordExamenes[3]) {
 
-            examenes.style.setProperty('left', (30) + "%");
+            var tomarExamenes = document.createElement('img');
 
-            examenes.style.setProperty('top', (30) + "%");
+            tomarExamenes.className = 'tomarExamenes';
 
-            document.body.prepend(examenes);
+            tomarExamenes.src = '/img/salir.gif'
 
-            var puertaPadre = document.getElementById('puertaPadre');
+            document.body.prepend(tomarExamenes);
 
-            var puertaCerrada = document.getElementById('puertaCerrada');
+            examenes.style.display = 'none';
 
-            var puertaAbierta = document.createElement('img');
+            var btnGroup = document.getElementById('btnGroup');
+
+            btnGroup.style.setProperty('visibility', 'hidden');
+
+            var contenedorTablero = document.getElementById('contenedorTablero');
+
+            var btnsalida = document.createElement('button');
+
+            btnsalida.className = 'btnSalida'
+
+            btnsalida.innerHTML = 'Ve a la salida';
+
+            contenedorTablero.append(btnsalida);
+
+            btnsalida.addEventListener('click', () => {
+
+                btnsalida.style.display = 'none';
+
+                tomarExamenes.style.display = 'none';
+
+                btnGroup.style.setProperty('visibility', 'visible');
+
+            });
 
             puertaAbierta.className = 'puertaAbierta'
 
@@ -640,7 +818,76 @@ window.onload = () => {
 
             puertaPadre.replaceChild(puertaAbierta, puertaCerrada);
 
+            salir = true;
+
         }
+
+        if (salir) {
+
+            if (coordJugador[0] == 600 && coordJugador[1] == 0 && coordJugador[2] == 700 && coordJugador[3] == 0) {
+
+                var youWin = document.createElement('img');
+
+                youWin.className = 'youWin';
+
+                youWin.src = '/img/youWin.gif'
+
+                document.body.prepend(youWin);
+
+                var btnGroup = document.getElementById('btnGroup');
+
+                btnGroup.style.setProperty('visibility', 'hidden');
+
+                var contenedorTablero = document.getElementById('contenedorTablero');
+
+                var btnReset = document.createElement('button');
+
+                btnReset.innerHTML = 'Volver a jugar';
+
+                btnReset.className = 'btnReset';
+
+                contenedorTablero.append(btnReset);
+
+                btnReset.addEventListener('click', () => {
+
+                    window.location.reload();
+
+                });
+
+            } else if (coordJugador[0] == 700 && coordJugador[1] == 0 && coordJugador[2] == 600 && coordJugador[3] == 0) {
+
+                var youWin = document.createElement('img');
+
+                youWin.className = 'youWin';
+
+                youWin.src = '/img/youWin.gif'
+
+                document.body.prepend(youWin);
+
+                var btnGroup = document.getElementById('btnGroup');
+
+                btnGroup.style.setProperty('visibility', 'hidden');
+
+                var contenedorTablero = document.getElementById('contenedorTablero');
+
+                var btnReset = document.createElement('button');
+
+                btnReset.innerHTML = 'Volver a jugar';
+
+                btnReset.className = 'btnReset';
+
+                contenedorTablero.append(btnReset);
+
+                btnReset.addEventListener('click', () => {
+
+                    window.location.reload();
+
+                });
+
+            }
+
+        }
+
     }
 
 }

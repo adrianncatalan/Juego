@@ -6,9 +6,10 @@ footer {
     color: white;
     padding-bottom: 0.5em;
     opacity: 0.7;
-    bottom: 0em;
-    width: 100%;
     margin-top: 10em;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
 }
 
 #last {

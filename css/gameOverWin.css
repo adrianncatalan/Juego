@@ -1,5 +1,5 @@
 .gameOver {
-    position: absolute;
+    position: fixed;
     display: flex;
     opacity: 0.7;
     margin: auto;
@@ -9,7 +9,7 @@
 }
 
 .youWin {
-    position: absolute;
+    position: fixed;
     display: flex;
     opacity: 0.7;
     margin: auto;
