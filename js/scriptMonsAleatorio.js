@@ -12,5 +12,4 @@ window.addEventListener('load', () => {
 
     monstruo.style.setProperty('top', (100 * numAleVertical) + "px");
 
-
 });

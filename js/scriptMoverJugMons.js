@@ -295,10 +295,10 @@ window.onload = () => {
         //---------------------------------------------------------------------------
 
         if ((coordJugador[0] == 700 && coordJugador[1] == 0 && coordJugador[2] == 0 && coordJugador[3] == 0) ||
-        (coordJugador[0] == 400 && coordJugador[1] == 0 && coordJugador[2] == 200 && coordJugador[3] == 0) || 
-        (coordJugador[0] == 600 && coordJugador[1] == 0 && coordJugador[2] == 300 && coordJugador[3] == 0) ||
-        (coordJugador[0] == 600 && coordJugador[1] == 0 && coordJugador[2] == 400 && coordJugador[3] == 0) ||
-        (coordJugador[0] == 300 && coordJugador[1] == 0 && coordJugador[2] == 500 && coordJugador[3] == 0)) {
+            (coordJugador[0] == 400 && coordJugador[1] == 0 && coordJugador[2] == 200 && coordJugador[3] == 0) ||
+            (coordJugador[0] == 600 && coordJugador[1] == 0 && coordJugador[2] == 300 && coordJugador[3] == 0) ||
+            (coordJugador[0] == 600 && coordJugador[1] == 0 && coordJugador[2] == 400 && coordJugador[3] == 0) ||
+            (coordJugador[0] == 300 && coordJugador[1] == 0 && coordJugador[2] == 500 && coordJugador[3] == 0)) {
 
             mover = 0;
 
@@ -733,6 +733,24 @@ window.onload = () => {
 
         var coordExamenes = [coordIzqExams, coordDereExams, coordArrExams, coordAbaExams];
 
+        console.log(coordJugador[0])
+
+        console.log(coordJugador[1])
+
+        console.log(coordJugador[2])
+
+        console.log(coordJugador[3])
+
+        console.log("-------")
+
+        console.log(coordMonstruo[0])
+
+        console.log(coordMonstruo[1])
+
+        console.log(coordMonstruo[2])
+
+        console.log(coordMonstruo[3])
+
         //--------------------------------------------------------------------------
 
         var mover = 100;
@@ -746,16 +764,15 @@ window.onload = () => {
         //---------------------------------------------------------------------------
 
         if ((coordJugador[0] == 500 && coordJugador[1] == 0 && coordJugador[2] == 100 && coordJugador[3] == 0) ||
-         (coordJugador[0] == 600 && coordJugador[1] == 0 && coordJugador[2] == 100 && coordJugador[3] == 0) ||
-         (coordJugador[0] == 200 && coordJugador[1] == 0 && coordJugador[2] == 300 && coordJugador[3] == 0) ||
-         (coordJugador[0] == 300 && coordJugador[1] == 0 && coordJugador[2] == 300 && coordJugador[3] == 0) ||
-         (coordJugador[0] == 400 && coordJugador[1] == 0 && coordJugador[2] == 500 && coordJugador[3] == 0) ||
-         (coordJugador[0] == 500 && coordJugador[1] == 0 && coordJugador[2] == 500 && coordJugador[3] == 0) ||
-         (coordJugador[0] == 100 && coordJugador[1] == 0 && coordJugador[2] == 600 && coordJugador[3] == 0) ||
-         (coordJugador[0] == 200 && coordJugador[1] == 0 && coordJugador[2] == 600 && coordJugador[3] == 0)) {
+            (coordJugador[0] == 600 && coordJugador[1] == 0 && coordJugador[2] == 100 && coordJugador[3] == 0) ||
+            (coordJugador[0] == 200 && coordJugador[1] == 0 && coordJugador[2] == 300 && coordJugador[3] == 0) ||
+            (coordJugador[0] == 300 && coordJugador[1] == 0 && coordJugador[2] == 300 && coordJugador[3] == 0) ||
+            (coordJugador[0] == 400 && coordJugador[1] == 0 && coordJugador[2] == 500 && coordJugador[3] == 0) ||
+            (coordJugador[0] == 500 && coordJugador[1] == 0 && coordJugador[2] == 500 && coordJugador[3] == 0) ||
+            (coordJugador[0] == 100 && coordJugador[1] == 0 && coordJugador[2] == 600 && coordJugador[3] == 0) ||
+            (coordJugador[0] == 200 && coordJugador[1] == 0 && coordJugador[2] == 600 && coordJugador[3] == 0)) {
 
             mover = 0;
-
 
         } else if (coordArrJug > 1) {
 
