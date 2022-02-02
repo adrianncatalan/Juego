@@ -161,7 +161,7 @@ window.onload = () => {
 
         //
 
-        //Monstruo mueve hacia la derecha
+        //Obstaculos
         if ((coordMonstruo[0] == 0 && coordMonstruo[1] == 0 && coordMonstruo[2] == 500 && coordMonstruo[3] == 0) ||
             (coordMonstruo[0] == 300 && coordMonstruo[1] == 0 && coordMonstruo[2] == 400 && coordMonstruo[3] == 0) ||
             (coordMonstruo[0] == 400 && coordMonstruo[1] == 0 && coordMonstruo[2] == 300 && coordMonstruo[3] == 0) ||
@@ -406,7 +406,7 @@ window.onload = () => {
 
         }
 
-        //Monstruo mueve hacia a la izquierda
+        //Obstaculos
         if ((coordMonstruo[0] == 700 && coordMonstruo[1] == 0 && coordMonstruo[2] == 0 && coordMonstruo[3] == 0) ||
             (coordMonstruo[0] == 400 && coordMonstruo[1] == 0 && coordMonstruo[2] == 200 && coordMonstruo[3] == 0) ||
             (coordMonstruo[0] == 600 && coordMonstruo[1] == 0 && coordMonstruo[2] == 300 && coordMonstruo[3] == 0) ||
@@ -415,9 +415,41 @@ window.onload = () => {
 
             mover = 0;
 
-        } else if (coordIzqMons >= 1) {
+        } else if (coordJugador[0] < coordMonstruo[0]) {
 
-            monstruo.style.setProperty('left', (coordIzqMons - mover) + 'px');
+            //Mover izquierda monstruo
+            if (coordIzqMons >= 1) {
+
+                monstruo.style.setProperty('left', (coordIzqMons - mover) + 'px');
+                console.log("Monstruo a la izquierda");
+            }
+
+        } else if (coordJugador[2] < coordMonstruo[2]) {
+
+            //Mover arriba monstruo
+            if (coordArrMons > 1) {
+
+                monstruo.style.setProperty('top', (coordArrMons - mover) + 'px');
+                console.log("Monstruo hacia arriba");
+            }
+
+        } else if (coordJugador[0] > coordMonstruo[0]) {
+
+            // Mover derecha monstruo
+            if (coordIzqMons + anchuraMonstruo <= anchuraTablero - mover) {
+
+                monstruo.style.setProperty('left', (coordIzqMons + mover) + 'px');
+                console.log("Monstruo hacia la derecha");
+            }
+
+        } else if (coordJugador[2] > coordMonstruo[2]) {
+
+            //Mover abajo monstruo
+            if (coordArrMons + anchuraMonstruo < anchuraTablero - mover) {
+
+                monstruo.style.setProperty('top', (coordArrMons + mover) + 'px');
+                console.log("Monstruo hacia abajo");
+            }
 
         }
 
@@ -654,7 +686,7 @@ window.onload = () => {
 
         }
 
-        //Monstruo mueve hacia abajo
+        //Obstaculos
         if ((coordMonstruo[0] == 300 && coordMonstruo[1] == 0 && coordMonstruo[2] == 100 && coordMonstruo[3] == 0) ||
             (coordMonstruo[0] == 200 && coordMonstruo[1] == 0 && coordMonstruo[2] == 100 && coordMonstruo[3] == 0) ||
             (coordMonstruo[0] == 500 && coordMonstruo[1] == 0 && coordMonstruo[2] == 200 && coordMonstruo[3] == 0) ||
@@ -664,9 +696,41 @@ window.onload = () => {
 
             mover = 0;
 
-        } else if (coordArrMons + anchuraMonstruo < anchuraTablero - mover) {
+        } else if (coordJugador[0] < coordMonstruo[0]) {
 
-            monstruo.style.setProperty('top', (coordArrMons + mover) + 'px');
+            //Mover izquierda monstruo
+            if (coordIzqMons >= 1) {
+
+                monstruo.style.setProperty('left', (coordIzqMons - mover) + 'px');
+                console.log("Monstruo a la izquierda");
+            }
+
+        } else if (coordJugador[2] < coordMonstruo[2]) {
+
+            //Mover arriba monstruo
+            if (coordArrMons > 1) {
+
+                monstruo.style.setProperty('top', (coordArrMons - mover) + 'px');
+                console.log("Monstruo hacia arriba");
+            }
+
+        } else if (coordJugador[0] > coordMonstruo[0]) {
+
+            // Mover derecha monstruo
+            if (coordIzqMons + anchuraMonstruo <= anchuraTablero - mover) {
+
+                monstruo.style.setProperty('left', (coordIzqMons + mover) + 'px');
+                console.log("Monstruo hacia la derecha");
+            }
+
+        } else if (coordJugador[2] > coordMonstruo[2]) {
+
+            //Mover abajo monstruo
+            if (coordArrMons + anchuraMonstruo < anchuraTablero - mover) {
+
+                monstruo.style.setProperty('top', (coordArrMons + mover) + 'px');
+                console.log("Monstruo hacia abajo");
+            }
 
         }
 
@@ -887,9 +951,41 @@ window.onload = () => {
 
             mover = 0;
 
-        } else if (coordArrMons > 1) {
+        } else if (coordJugador[0] < coordMonstruo[0]) {
 
-            monstruo.style.setProperty('top', (coordArrMons - mover) + 'px');
+            //Mover izquierda monstruo
+            if (coordIzqMons >= 1) {
+
+                monstruo.style.setProperty('left', (coordIzqMons - mover) + 'px');
+                console.log("Monstruo a la izquierda");
+            }
+
+        } else if (coordJugador[2] < coordMonstruo[2]) {
+
+            //Mover arriba monstruo
+            if (coordArrMons > 1) {
+
+                monstruo.style.setProperty('top', (coordArrMons - mover) + 'px');
+                console.log("Monstruo hacia arriba");
+            }
+
+        } else if (coordJugador[0] > coordMonstruo[0]) {
+
+            // Mover derecha monstruo
+            if (coordIzqMons + anchuraMonstruo <= anchuraTablero - mover) {
+
+                monstruo.style.setProperty('left', (coordIzqMons + mover) + 'px');
+                console.log("Monstruo hacia la derecha");
+            }
+
+        } else if (coordJugador[2] > coordMonstruo[2]) {
+
+            //Mover abajo monstruo
+            if (coordArrMons + anchuraMonstruo < anchuraTablero - mover) {
+
+                monstruo.style.setProperty('top', (coordArrMons + mover) + 'px');
+                console.log("Monstruo hacia abajo");
+            }
 
         }
 
