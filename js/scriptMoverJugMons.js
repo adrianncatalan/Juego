@@ -86,9 +86,18 @@ window.onload = () => {
 
         var coordExamenes = [coordIzqExams, coordDereExams, coordArrExams, coordAbaExams];
 
-        //--------------------------------------------------------------------------
+        //---------------------------------------------------------------------------
 
-        if (coordIzqJug + anchuraJugador <= anchuraTablero - mover) {
+
+        if ((coordJugador[0] == 400 && coordJugador[1] == 0 && coordJugador[2] == 0 && coordJugador[3] == 0) ||
+            (coordJugador[0] == 100 && coordJugador[1] == 0 && coordJugador[2] == 200 && coordJugador[3] == 0) ||
+            (coordJugador[0] == 400 && coordJugador[1] == 0 && coordJugador[2] == 300 && coordJugador[3] == 0) ||
+            (coordJugador[0] == 300 && coordJugador[1] == 0 && coordJugador[2] == 400 && coordJugador[3] == 0) ||
+            (coordJugador[0] == 0 && coordJugador[1] == 0 && coordJugador[2] == 500 && coordJugador[3] == 0)) {
+
+            mover = 0;
+
+        } else if (coordIzqJug + anchuraJugador <= anchuraTablero - mover) {
 
             jugador.style.setProperty('left', (coordIzqJug + mover) + 'px');
 
@@ -283,9 +292,17 @@ window.onload = () => {
 
         var coordExamenes = [coordIzqExams, coordDereExams, coordArrExams, coordAbaExams];
 
-        //--------------------------------------------------------------------------
+        //---------------------------------------------------------------------------
 
-        if (coordIzqJug >= 1) {
+        if ((coordJugador[0] == 700 && coordJugador[1] == 0 && coordJugador[2] == 0 && coordJugador[3] == 0) ||
+        (coordJugador[0] == 400 && coordJugador[1] == 0 && coordJugador[2] == 200 && coordJugador[3] == 0) || 
+        (coordJugador[0] == 600 && coordJugador[1] == 0 && coordJugador[2] == 300 && coordJugador[3] == 0) ||
+        (coordJugador[0] == 600 && coordJugador[1] == 0 && coordJugador[2] == 400 && coordJugador[3] == 0) ||
+        (coordJugador[0] == 300 && coordJugador[1] == 0 && coordJugador[2] == 500 && coordJugador[3] == 0)) {
+
+            mover = 0;
+
+        } else if (coordIzqJug >= 1) {
 
             jugador.style.setProperty('left', (coordIzqJug - mover) + 'px');
 
@@ -516,9 +533,16 @@ window.onload = () => {
 
         var anchuraJugador = jugador.offsetWidth;
 
-        var anchuraMonstruo = monstruo.offsetWidth;
+        if ((coordJugador[0] == 200 && coordJugador[1] == 0 && coordJugador[2] == 100 && coordJugador[3] == 0) ||
+            (coordJugador[0] == 300 && coordJugador[1] == 0 && coordJugador[2] == 100 && coordJugador[3] == 0) ||
+            (coordJugador[0] == 500 && coordJugador[1] == 0 && coordJugador[2] == 200 && coordJugador[3] == 0) ||
+            (coordJugador[0] == 400 && coordJugador[1] == 0 && coordJugador[2] == 300 && coordJugador[3] == 0) ||
+            (coordJugador[0] == 100 && coordJugador[1] == 0 && coordJugador[2] == 400 && coordJugador[3] == 0) ||
+            (coordJugador[0] == 200 && coordJugador[1] == 0 && coordJugador[2] == 400 && coordJugador[3] == 0)) {
 
-        if (coordArrJug + anchuraJugador < anchuraTablero - mover) {
+            mover = 0;
+
+        } else if (coordArrJug + anchuraJugador < anchuraTablero - mover) {
 
             jugador.style.setProperty('top', (coordArrJug + mover) + 'px');
 
@@ -621,8 +645,6 @@ window.onload = () => {
 
         }
 
-        console.log(salir)
-
         if (salir) {
 
             if (coordJugador[0] == 700 && coordJugador[1] == 0 && coordJugador[2] == 600 && coordJugador[3] == 0) {
@@ -721,7 +743,21 @@ window.onload = () => {
 
         var anchuraMonstruo = monstruo.offsetWidth;
 
-        if (coordArrJug > 1) {
+        //---------------------------------------------------------------------------
+
+        if ((coordJugador[0] == 500 && coordJugador[1] == 0 && coordJugador[2] == 100 && coordJugador[3] == 0) ||
+         (coordJugador[0] == 600 && coordJugador[1] == 0 && coordJugador[2] == 100 && coordJugador[3] == 0) ||
+         (coordJugador[0] == 200 && coordJugador[1] == 0 && coordJugador[2] == 300 && coordJugador[3] == 0) ||
+         (coordJugador[0] == 300 && coordJugador[1] == 0 && coordJugador[2] == 300 && coordJugador[3] == 0) ||
+         (coordJugador[0] == 400 && coordJugador[1] == 0 && coordJugador[2] == 500 && coordJugador[3] == 0) ||
+         (coordJugador[0] == 500 && coordJugador[1] == 0 && coordJugador[2] == 500 && coordJugador[3] == 0) ||
+         (coordJugador[0] == 100 && coordJugador[1] == 0 && coordJugador[2] == 600 && coordJugador[3] == 0) ||
+         (coordJugador[0] == 200 && coordJugador[1] == 0 && coordJugador[2] == 600 && coordJugador[3] == 0)) {
+
+            mover = 0;
+
+
+        } else if (coordArrJug > 1) {
 
             jugador.style.setProperty('top', (coordArrJug - mover) + 'px');
 
