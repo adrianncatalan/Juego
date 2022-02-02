@@ -170,9 +170,41 @@ window.onload = () => {
 
             mover = 0;
 
-        } else if (coordIzqMons + anchuraMonstruo <= anchuraTablero - mover) {
+        } else if (coordJugador[0] < coordMonstruo[0]) {
 
-            monstruo.style.setProperty('left', (coordIzqMons + mover) + 'px');
+            //Mover izquierda monstruo
+            if (coordIzqMons >= 1) {
+
+                monstruo.style.setProperty('left', (coordIzqMons - mover) + 'px');
+                console.log("Monstruo a la izquierda");
+            }
+
+        } else if (coordJugador[2] < coordMonstruo[2]) {
+
+            //Mover arriba monstruo
+            if (coordArrMons > 1) {
+
+                monstruo.style.setProperty('top', (coordArrMons - mover) + 'px');
+                console.log("Monstruo hacia arriba");
+            }
+
+        } else if (coordJugador[0] > coordMonstruo[0]) {
+
+            // Mover derecha monstruo
+            if (coordIzqMons + anchuraMonstruo <= anchuraTablero - mover) {
+
+                monstruo.style.setProperty('left', (coordIzqMons + mover) + 'px');
+                console.log("Monstruo hacia la derecha");
+            }
+
+        } else if (coordJugador[2] > coordMonstruo[2]) {
+
+            //Mover abajo monstruo
+            if (coordArrMons + anchuraMonstruo < anchuraTablero - mover) {
+
+                monstruo.style.setProperty('top', (coordArrMons + mover) + 'px');
+                console.log("Monstruo hacia abajo");
+            }
 
         }
 
