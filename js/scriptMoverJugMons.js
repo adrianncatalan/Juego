@@ -139,10 +139,40 @@ window.onload = () => {
 
         }
 
-        //Monstruo mueve hacia arriba
-        if (coordArrMons > 1) {
+        //
 
-            monstruo.style.setProperty('top', (coordArrMons - mover) + 'px');
+        console.log(coordJugador[0]);
+
+        console.log(coordJugador[1]);
+
+        console.log(coordJugador[2]);
+
+        console.log(coordJugador[3]);
+
+        console.log("-------");
+
+        console.log(coordMonstruo[0]);
+
+        console.log(coordMonstruo[1]);
+
+        console.log(coordMonstruo[2]);
+
+        console.log(coordMonstruo[3]);
+
+        //
+
+        //Monstruo mueve hacia la derecha
+        if ((coordMonstruo[0] == 0 && coordMonstruo[1] == 0 && coordMonstruo[2] == 500 && coordMonstruo[3] == 0) ||
+            (coordMonstruo[0] == 300 && coordMonstruo[1] == 0 && coordMonstruo[2] == 400 && coordMonstruo[3] == 0) ||
+            (coordMonstruo[0] == 400 && coordMonstruo[1] == 0 && coordMonstruo[2] == 300 && coordMonstruo[3] == 0) ||
+            (coordMonstruo[0] == 100 && coordMonstruo[1] == 0 && coordMonstruo[2] == 200 && coordMonstruo[3] == 0) ||
+            (coordMonstruo[0] == 400 && coordMonstruo[1] == 0 && coordMonstruo[2] == 0 && coordMonstruo[3] == 0)) {
+
+            mover = 0;
+
+        } else if (coordIzqMons + anchuraMonstruo <= anchuraTablero - mover) {
+
+            monstruo.style.setProperty('left', (coordIzqMons + mover) + 'px');
 
         }
 
@@ -344,10 +374,18 @@ window.onload = () => {
 
         }
 
-        //Monstruo mueve hacia abajo
-        if (coordArrMons + anchuraMonstruo < anchuraTablero - mover) {
+        //Monstruo mueve hacia a la izquierda
+        if ((coordMonstruo[0] == 700 && coordMonstruo[1] == 0 && coordMonstruo[2] == 0 && coordMonstruo[3] == 0) ||
+            (coordMonstruo[0] == 400 && coordMonstruo[1] == 0 && coordMonstruo[2] == 200 && coordMonstruo[3] == 0) ||
+            (coordMonstruo[0] == 600 && coordMonstruo[1] == 0 && coordMonstruo[2] == 300 && coordMonstruo[3] == 0) ||
+            (coordMonstruo[0] == 600 && coordMonstruo[1] == 0 && coordMonstruo[2] == 400 && coordMonstruo[3] == 0) ||
+            (coordMonstruo[0] == 300 && coordMonstruo[1] == 0 && coordMonstruo[2] == 500 && coordMonstruo[3] == 0)) {
 
-            monstruo.style.setProperty('top', (coordArrMons + mover) + 'px');
+            mover = 0;
+
+        } else if (coordIzqMons >= 1) {
+
+            monstruo.style.setProperty('left', (coordIzqMons - mover) + 'px');
 
         }
 
@@ -471,8 +509,6 @@ window.onload = () => {
 
     }
 
-
-
     function moverAbajo() {
 
         var jugador = document.getElementById('jugador');
@@ -533,6 +569,8 @@ window.onload = () => {
 
         var anchuraJugador = jugador.offsetWidth;
 
+        var anchuraMonstruo = monstruo.offsetWidth;
+
         if ((coordJugador[0] == 200 && coordJugador[1] == 0 && coordJugador[2] == 100 && coordJugador[3] == 0) ||
             (coordJugador[0] == 300 && coordJugador[1] == 0 && coordJugador[2] == 100 && coordJugador[3] == 0) ||
             (coordJugador[0] == 500 && coordJugador[1] == 0 && coordJugador[2] == 200 && coordJugador[3] == 0) ||
@@ -584,10 +622,19 @@ window.onload = () => {
 
         }
 
-        //Monstruo mueve hacia a la izquierda
-        if (coordIzqMons >= 1) {
+        //Monstruo mueve hacia abajo
+        if ((coordMonstruo[0] == 300 && coordMonstruo[1] == 0 && coordMonstruo[2] == 100 && coordMonstruo[3] == 0) ||
+            (coordMonstruo[0] == 200 && coordMonstruo[1] == 0 && coordMonstruo[2] == 100 && coordMonstruo[3] == 0) ||
+            (coordMonstruo[0] == 500 && coordMonstruo[1] == 0 && coordMonstruo[2] == 200 && coordMonstruo[3] == 0) ||
+            (coordMonstruo[0] == 400 && coordMonstruo[1] == 0 && coordMonstruo[2] == 300 && coordMonstruo[3] == 0) ||
+            (coordMonstruo[0] == 200 && coordMonstruo[1] == 0 && coordMonstruo[2] == 400 && coordMonstruo[3] == 0) ||
+            (coordMonstruo[0] == 100 && coordMonstruo[1] == 0 && coordMonstruo[2] == 400 && coordMonstruo[3] == 0)) {
 
-            monstruo.style.setProperty('left', (coordIzqMons - mover) + 'px');
+            mover = 0;
+
+        } else if (coordArrMons + anchuraMonstruo < anchuraTablero - mover) {
+
+            monstruo.style.setProperty('top', (coordArrMons + mover) + 'px');
 
         }
 
@@ -640,8 +687,6 @@ window.onload = () => {
             puertaPadre.replaceChild(puertaAbierta, puertaCerrada);
 
             salir = true;
-
-            console.log(salir)
 
         }
 
@@ -733,24 +778,6 @@ window.onload = () => {
 
         var coordExamenes = [coordIzqExams, coordDereExams, coordArrExams, coordAbaExams];
 
-        console.log(coordJugador[0])
-
-        console.log(coordJugador[1])
-
-        console.log(coordJugador[2])
-
-        console.log(coordJugador[3])
-
-        console.log("-------")
-
-        console.log(coordMonstruo[0])
-
-        console.log(coordMonstruo[1])
-
-        console.log(coordMonstruo[2])
-
-        console.log(coordMonstruo[3])
-
         //--------------------------------------------------------------------------
 
         var mover = 100;
@@ -816,10 +843,21 @@ window.onload = () => {
 
         }
 
-        //Monstruo mueve hacia la derecha
-        if (coordIzqMons + anchuraMonstruo <= anchuraTablero - mover) {
+        //Monstruo mueve hacia arriba
+        if ((coordMonstruo[0] == 100 && coordMonstruo[1] == 0 && coordMonstruo[2] == 600 && coordMonstruo[3] == 0) ||
+            (coordMonstruo[0] == 200 && coordMonstruo[1] == 0 && coordMonstruo[2] == 600 && coordMonstruo[3] == 0) ||
+            (coordMonstruo[0] == 400 && coordMonstruo[1] == 0 && coordMonstruo[2] == 500 && coordMonstruo[3] == 0) ||
+            (coordMonstruo[0] == 500 && coordMonstruo[1] == 0 && coordMonstruo[2] == 500 && coordMonstruo[3] == 0) ||
+            (coordMonstruo[0] == 300 && coordMonstruo[1] == 0 && coordMonstruo[2] == 300 && coordMonstruo[3] == 0) ||
+            (coordMonstruo[0] == 200 && coordMonstruo[1] == 0 && coordMonstruo[2] == 300 && coordMonstruo[3] == 0) ||
+            (coordMonstruo[0] == 500 && coordMonstruo[1] == 0 && coordMonstruo[2] == 100 && coordMonstruo[3] == 0) ||
+            (coordMonstruo[0] == 600 && coordMonstruo[1] == 0 && coordMonstruo[2] == 100 && coordMonstruo[3] == 0)) {
 
-            monstruo.style.setProperty('left', (coordIzqMons + mover) + 'px');
+            mover = 0;
+
+        } else if (coordArrMons > 1) {
+
+            monstruo.style.setProperty('top', (coordArrMons - mover) + 'px');
 
         }
 
