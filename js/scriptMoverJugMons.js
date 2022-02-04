@@ -22,6 +22,179 @@ window.onload = () => {
 
     //--------------------------------------------------------------------------
 
+    var td = document.querySelectorAll("td");
+
+    var jugador = document.getElementById('jugador');
+
+    var estilosJugador = window.getComputedStyle(jugador);
+
+    var coordIzqJug = parseInt(estilosJugador.getPropertyValue('left'));
+
+    var coordDereJug = parseInt(estilosJugador.getPropertyValue('right'));
+
+    var coordArrJug = parseInt(estilosJugador.getPropertyValue('top'));
+
+    var coordAbaJug = parseInt(estilosJugador.getPropertyValue('bottom'));
+
+    var coordJugador = [coordIzqJug, coordDereJug, coordArrJug, coordAbaJug];
+
+    var mover = 0;
+
+    var tablero = document.getElementById('tablero');
+
+    var anchuraTablero = tablero.offsetWidth;
+
+    var anchuraJugador = jugador.offsetWidth;
+
+    //---------------------------------------------------------------------------
+
+    if(coordJugador[0] >= 100 || coordJugador[0] <= 700 && coordJugador[1] == 0 && coordJugador[2] >= 0 || coordJugador[2] <= 700 && coordJugador[3] == 0){
+            
+            td[1].addEventListener("click", (e) => {
+            
+                mover += 100;
+
+                if (coordIzqJug + anchuraJugador <= anchuraTablero - mover) {
+            
+                jugador.style.left = mover + "px";
+
+                }
+
+            });
+        
+    } else if(coordJugador[0] >= 0 || coordJugador[0] <= 700 && coordJugador[1] == 0 && coordJugador[2] >= 0 || coordJugador[2] <= 700 && coordJugador[3] == 0){
+
+        for (let i = 8; i < 16; i++) {
+            
+            td[i].addEventListener("click", (e) => {
+            
+                mover += 100;
+
+                if (coordIzqJug + anchuraJugador <= anchuraTablero - mover) {
+            
+                jugador.style.left = mover + "px";
+
+                }
+
+            });
+
+        }
+        
+    } 
+
+// else if(coordJugador[0] >= 0 || coordJugador[0] <= 0 && coordJugador[1] == 0 && coordJugador[2] == 200 && coordJugador[3] == 0){
+
+    //     for (let i = 0; i < 8; i++) {
+            
+    //         td[i].addEventListener("click", (e) => {
+            
+    //             mover += 100;
+
+    //             if (coordIzqJug + anchuraJugador <= anchuraTablero - mover) {
+            
+    //             jugador.style.left = mover + "px";
+
+    //             }
+
+    //         });
+
+    //     }
+
+    // } else if(coordJugador[0] >= 0 || coordJugador[0] <= 0 && coordJugador[1] == 0 && coordJugador[2] == 300 && coordJugador[3] == 0){
+
+    //     for (let i = 0; i < 8; i++) {
+            
+    //         td[i].addEventListener("click", (e) => {
+
+    //             mover += 100;
+
+    //             if (coordIzqJug + anchuraJugador <= anchuraTablero - mover) {
+            
+    //             jugador.style.left = mover + "px";
+
+
+    //             }
+
+    //         });
+
+    //     }
+
+    // } else if(coordJugador[0] >= 0 || coordJugador[0] <= 0 && coordJugador[1] == 0 && coordJugador[2] == 400 && coordJugador[3] == 0){
+
+    //     for (let i = 0; i < 8; i++) {
+         
+    //         td[i].addEventListener("click", (e) => {
+
+    //             console.log("hola");
+            
+    //             mover += 100;
+
+    //             if (coordIzqJug + anchuraJugador <= anchuraTablero - mover) {
+            
+    //             jugador.style.left = mover + "px";
+
+    //             }
+
+    //         });
+
+    //     }
+
+    // }else if(coordJugador[0] >= 0 || coordJugador[0] <= 0 && coordJugador[1] == 0 && coordJugador[2] == 500 && coordJugador[3] == 0){
+
+    //     for (let i = 0; i < 8; i++) {
+            
+    //         td[i].addEventListener("click", (e) => {
+            
+    //             mover += 100;
+
+    //             if (coordIzqJug + anchuraJugador <= anchuraTablero - mover) {
+            
+    //             jugador.style.left = mover + "px";
+
+    //             }
+
+    //         });
+
+    //     }
+
+    // } else if(coordJugador[0] >= 0 || coordJugador[0] <= 0 && coordJugador[1] == 0 && coordJugador[2] == 600 && coordJugador[3] == 0){
+
+    //     for (let i = 0; i < 8; i++) {
+            
+    //         td[i].addEventListener("click", (e) => {
+            
+    //             mover += 100;
+
+    //             if (coordIzqJug + anchuraJugador <= anchuraTablero - mover) {
+            
+    //             jugador.style.left = mover + "px";
+            
+    //             }
+
+    //         });
+
+    //     }
+
+    // } else if(coordJugador[0] >= 0 || coordJugador[0] <= 0 && coordJugador[1] == 0 && coordJugador[2] == 700 && coordJugador[3] == 0){
+
+    //     for (let i = 0; i < 8; i++) {
+            
+    //         td[i].addEventListener("click", (e) => {
+
+    //             mover += 100;
+
+    //             if (coordIzqJug + anchuraJugador <= anchuraTablero - mover) {
+            
+    //             jugador.style.left = mover + "px";
+
+    //             }
+
+    //         });
+
+    //     }
+
+    // }
+
     var salir;
 
     function moverDerecha() {
@@ -88,7 +261,6 @@ window.onload = () => {
 
         //---------------------------------------------------------------------------
 
-
         if ((coordJugador[0] == 400 && coordJugador[1] == 0 && coordJugador[2] == 0 && coordJugador[3] == 0) ||
             (coordJugador[0] == 100 && coordJugador[1] == 0 && coordJugador[2] == 200 && coordJugador[3] == 0) ||
             (coordJugador[0] == 400 && coordJugador[1] == 0 && coordJugador[2] == 300 && coordJugador[3] == 0) ||
@@ -149,15 +321,15 @@ window.onload = () => {
 
         console.log(coordJugador[3]);
 
-        console.log("-------");
+        // console.log("-------");
 
-        console.log(coordMonstruo[0]);
+        // console.log(coordMonstruo[0]);
 
-        console.log(coordMonstruo[1]);
+        // console.log(coordMonstruo[1]);
 
-        console.log(coordMonstruo[2]);
+        // console.log(coordMonstruo[2]);
 
-        console.log(coordMonstruo[3]);
+        // console.log(coordMonstruo[3]);
 
         //
 
@@ -353,6 +525,18 @@ window.onload = () => {
         var coordAbaExams = parseInt(estilosExamenes.getPropertyValue('bottom'));
 
         var coordExamenes = [coordIzqExams, coordDereExams, coordArrExams, coordAbaExams];
+
+        //---------------------------------------------------------------------------
+
+        console.log(coordJugador[0]);
+
+        console.log(coordJugador[1]);
+
+        console.log(coordJugador[2]);
+
+        console.log(coordJugador[3]);
+
+        console.log("-------");
 
         //---------------------------------------------------------------------------
 
@@ -635,6 +819,20 @@ window.onload = () => {
 
         var anchuraMonstruo = monstruo.offsetWidth;
 
+        //---------------------------------------------------------------------------
+
+        console.log(coordJugador[0]);
+
+        console.log(coordJugador[1]);
+
+        console.log(coordJugador[2]);
+
+        console.log(coordJugador[3]);
+
+        console.log("-------");
+
+        //---------------------------------------------------------------------------
+
         if ((coordJugador[0] == 200 && coordJugador[1] == 0 && coordJugador[2] == 100 && coordJugador[3] == 0) ||
             (coordJugador[0] == 300 && coordJugador[1] == 0 && coordJugador[2] == 100 && coordJugador[3] == 0) ||
             (coordJugador[0] == 500 && coordJugador[1] == 0 && coordJugador[2] == 200 && coordJugador[3] == 0) ||
@@ -883,6 +1081,18 @@ window.onload = () => {
         var anchuraTablero = tablero.offsetWidth;
 
         var anchuraMonstruo = monstruo.offsetWidth;
+
+        //---------------------------------------------------------------------------
+
+        console.log(coordJugador[0]);
+
+        console.log(coordJugador[1]);
+
+        console.log(coordJugador[2]);
+
+        console.log(coordJugador[3]);
+
+        console.log("-------");
 
         //---------------------------------------------------------------------------
 

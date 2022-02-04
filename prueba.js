@@ -1,22 +1,29 @@
-window.addEventListener('load', () => {
+// window.addEventListener("load", () => {
+//   var jugador = document.getElementById("jugador");
 
-    var test = document.getElementById('test');
+//   var estilosJugador = window.getComputedStyle(jugador);
 
-    var estilosTest = window.getComputedStyle(test);
+//   var td = document.querySelectorAll("td");
 
-    coordTest = test.getBoundingClientRect();
+//   var mover = 0;
 
-    document.body.addEventListener('click', (e) => {
+// //   for (let i = 0; i < td.length; i++) {
 
-       
-
-        
-       
-
-        console.log(test.style.setProperty('left', e.pageX))
-
-    })
+//     // console.log(juegador.left)
 
 
 
-})
+// //   }
+
+//   td.forEach((celda) => {
+//     celda.addEventListener("click", (e) => {
+//       console.log("hola");
+
+//       mover += 100;
+
+//       jugador.style.left = mover + "px";
+
+//       console.log(mover);
+//     });
+//   });
+// });
