@@ -283,10 +283,6 @@ window.onload = () => {
 
                 document.body.prepend(gameOver);
 
-                var btnGroup = document.getElementById('btnGroup');
-
-                btnGroup.style.setProperty('visibility', 'hidden');
-
                 var contenedorTablero = document.getElementById('contenedorTablero');
 
                 var btnReset = document.createElement('button');
@@ -398,10 +394,6 @@ window.onload = () => {
 
             examenes.style.display = 'none';
 
-            var btnGroup = document.getElementById('btnGroup');
-
-            btnGroup.style.setProperty('visibility', 'hidden');
-
             var contenedorTablero = document.getElementById('contenedorTablero');
 
             var btnsalida = document.createElement('button');
@@ -417,8 +409,6 @@ window.onload = () => {
                 btnsalida.style.display = 'none';
 
                 tomarExamenes.style.display = 'none';
-
-                btnGroup.style.setProperty('visibility', 'visible');
 
             });
 
@@ -440,13 +430,9 @@ window.onload = () => {
 
                 youWin.className = 'youWin';
 
-                youWin.src = '/img/youWin.gif'
+                youWin.src = '/img/youWin2.gif'
 
                 document.body.prepend(youWin);
-
-                var btnGroup = document.getElementById('btnGroup');
-
-                btnGroup.style.setProperty('visibility', 'hidden');
 
                 var contenedorTablero = document.getElementById('contenedorTablero');
 
@@ -562,10 +548,6 @@ window.onload = () => {
 
                 document.body.prepend(gameOver);
 
-                var btnGroup = document.getElementById('btnGroup');
-
-                btnGroup.style.setProperty('visibility', 'hidden');
-
                 var contenedorTablero = document.getElementById('contenedorTablero');
 
                 var btnReset = document.createElement('button');
@@ -655,10 +637,6 @@ window.onload = () => {
 
             examenes.style.display = 'none';
 
-            var btnGroup = document.getElementById('btnGroup');
-
-            btnGroup.style.setProperty('visibility', 'hidden');
-
             var contenedorTablero = document.getElementById('contenedorTablero');
 
             var btnsalida = document.createElement('button');
@@ -674,8 +652,6 @@ window.onload = () => {
                 btnsalida.style.display = 'none';
 
                 tomarExamenes.style.display = 'none';
-
-                btnGroup.style.setProperty('visibility', 'visible');
 
             });
 
@@ -697,13 +673,9 @@ window.onload = () => {
 
                 youWin.className = 'youWin';
 
-                youWin.src = '/img/youWin.gif'
+                youWin.src = '/img/youWin2.gif'
 
                 document.body.prepend(youWin);
-
-                var btnGroup = document.getElementById('btnGroup');
-
-                btnGroup.style.setProperty('visibility', 'hidden');
 
                 var contenedorTablero = document.getElementById('contenedorTablero');
 
@@ -727,13 +699,9 @@ window.onload = () => {
 
                 youWin.className = 'youWin';
 
-                youWin.src = '/img/youWin.gif'
+                youWin.src = '/img/youWin2.gif'
 
                 document.body.prepend(youWin);
-
-                var btnGroup = document.getElementById('btnGroup');
-
-                btnGroup.style.setProperty('visibility', 'hidden');
 
                 var contenedorTablero = document.getElementById('contenedorTablero');
 
@@ -856,10 +824,6 @@ window.onload = () => {
 
                 document.body.prepend(gameOver);
 
-                var btnGroup = document.getElementById('btnGroup');
-
-                btnGroup.style.setProperty('visibility', 'hidden');
-
                 var contenedorTablero = document.getElementById('contenedorTablero');
 
                 var btnReset = document.createElement('button');
@@ -950,10 +914,6 @@ window.onload = () => {
 
             examenes.style.display = 'none';
 
-            var btnGroup = document.getElementById('btnGroup');
-
-            btnGroup.style.setProperty('visibility', 'hidden');
-
             var contenedorTablero = document.getElementById('contenedorTablero');
 
             var btnsalida = document.createElement('button');
@@ -969,8 +929,6 @@ window.onload = () => {
                 btnsalida.style.display = 'none';
 
                 tomarExamenes.style.display = 'none';
-
-                btnGroup.style.setProperty('visibility', 'visible');
 
             });
 
@@ -992,13 +950,9 @@ window.onload = () => {
 
                 youWin.className = 'youWin';
 
-                youWin.src = '/img/youWin.gif'
+                youWin.src = '/img/youWin2.gif'
 
                 document.body.prepend(youWin);
-
-                var btnGroup = document.getElementById('btnGroup');
-
-                btnGroup.style.setProperty('visibility', 'hidden');
 
                 var contenedorTablero = document.getElementById('contenedorTablero');
 
@@ -1121,10 +1075,6 @@ window.onload = () => {
 
                 document.body.prepend(gameOver);
 
-                var btnGroup = document.getElementById('btnGroup');
-
-                btnGroup.style.setProperty('visibility', 'hidden');
-
                 var contenedorTablero = document.getElementById('contenedorTablero');
 
                 var btnReset = document.createElement('button');
@@ -1217,10 +1167,6 @@ window.onload = () => {
 
             examenes.style.display = 'none';
 
-            var btnGroup = document.getElementById('btnGroup');
-
-            btnGroup.style.setProperty('visibility', 'hidden');
-
             var contenedorTablero = document.getElementById('contenedorTablero');
 
             var btnsalida = document.createElement('button');
@@ -1236,8 +1182,6 @@ window.onload = () => {
                 btnsalida.style.display = 'none';
 
                 tomarExamenes.style.display = 'none';
-
-                btnGroup.style.setProperty('visibility', 'visible');
 
             });
 
@@ -1259,13 +1203,9 @@ window.onload = () => {
 
                 youWin.className = 'youWin';
 
-                youWin.src = '/img/youWin.gif'
+                youWin.src = '/img/youWin2.gif'
 
                 document.body.prepend(youWin);
-
-                var btnGroup = document.getElementById('btnGroup');
-
-                btnGroup.style.setProperty('visibility', 'hidden');
 
                 var contenedorTablero = document.getElementById('contenedorTablero');
 
@@ -1289,13 +1229,9 @@ window.onload = () => {
 
                 youWin.className = 'youWin';
 
-                youWin.src = '/img/youWin.gif'
+                youWin.src = '/img/youWin2.gif'
 
                 document.body.prepend(youWin);
-
-                var btnGroup = document.getElementById('btnGroup');
-
-                btnGroup.style.setProperty('visibility', 'hidden');
 
                 var contenedorTablero = document.getElementById('contenedorTablero');
 

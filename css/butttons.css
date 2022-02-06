@@ -1,42 +1,42 @@
-#btnGroup {
-    margin-top: 56em;
-    display: flex;
-    flex-direction: column;
-    align-self: flex-start;
+#btnGroupUno {
+    margin: 5em;
 }
 
-#btnArr {
-    display: flex;
-    justify-content: center;
+#btnGroupDos {
+    margin: 5em;
 }
 
-#btnIzqDer {
-    display: flex;
-    justify-content: center;
-
+#fleDere {
+    transform: rotate(180deg);
 }
 
-#btnAba {
-    display: flex;
-    justify-content: center;
+
+#fleArr {
+    transform: rotate(90deg);
+}
+
+#fleAba {
+    transform: rotate(-90deg);
+}
+
+#fleIzq, #fleDere, #fleArr, #fleAba {
+    width: 4em;
+    height: 4em;
 }
 
 button {
     cursor: pointer;
-    margin: 0.3em;
-    padding: 0.3em;
-    width: 10em;
-    height: 3em;
+    width: 4em;
+    height: 4em;
     background-color: #2f2f2f;
-    color: white;
-    font-family: sans-serif;
     font-size: 2em;
     border: 2px solid #2f2f2f;
     border-radius: 30px;
+    opacity: 0.8;
 }
 
 button:hover {
-    background-color: crimson;
+    background-color: white;
     color: yellow;
     transition: 0.3s ease;
 }
@@ -44,49 +44,47 @@ button:hover {
 .btnReset {
     cursor: pointer;
     margin: 0.3em;
-    padding: 1.5em;
+    padding: 1.2em;
     width: 13em;
     height: 4em;
     background-color: #2f2f2f;
     color: white;
-    font-family: sans-serif;
-    font-size: 2em;
+    font-family: "AnotherDangerDemo.otf", sans-serif;
+    font-size: 2.5em;
     border: 2px solid #2f2f2f;
     border-radius: 30px;
     display: flex;
     justify-content: center;
     position: fixed;
-    margin-top: 34em;
     z-index: 3;
 }
 
 .btnReset:hover {
-    background-color: crimson;
-    color: yellow;
+    background-color: white;
+    color: crimson;
     transition: 0.3s ease;
 }
 
 .btnSalida {
     cursor: pointer;
     margin: 0.3em;
-    padding: 1.5em;
+    padding: 1.2em;
     width: 13em;
     height: 4em;
     background-color: #2f2f2f;
     color: white;
-    font-family: sans-serif;
-    font-size: 2em;
+    font-family: "AnotherDangerDemo.otf", sans-serif;
+    font-size: 2.5em;
     border: 2px solid #2f2f2f;
     border-radius: 30px;
     display: flex;
     justify-content: center;
     position: fixed;
-    margin-top: 34em;
     z-index: 3;
 }
 
 .btnSalida:hover {
-    background-color: crimson;
-    color: yellow;
+    background-color: white;
+    color: crimson;
     transition: 0.3s ease;
 }

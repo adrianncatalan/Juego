@@ -18,8 +18,8 @@
 
     <div id="particles-js"></div>
     <main id="mainStart">
-        <!-- <h1>Empieza a jugar</h1> -->
-        <!-- <nav>
+        <h1>Empieza a jugar mortal</h1>
+        <nav>
             <ul>
                 <li>
                     <a href="/index.html">Inicio</a>
@@ -31,14 +31,22 @@
                     <a href="#">Puntajes</a>
                 </li>
             </ul>
-        </nav> -->
+        </nav>
     </main>
 
     <main id="contenedorTablero">
-        <div id="fondoTablero"></div>
+        <div id="btnGroupUno">
+            <div>
+                <button id="izquierda"><img id="fleIzq" src="/img/flecha.png" alt=""></button>
+            </div>
+            <div id="btnIzqDer">
+                <button id="derecha"><img id="fleDere" src="/img/flecha.png" alt=""></button>
+            </div>
+        </div>
+
         <table id="tablero">
             <tr>
-                <td><img id="casa" src="/img/casa.png" alt=""> <img id="jugador" src="/img/jugador.gif" alt=""></td>
+                <td> <img id="jugador" src="/img/jugador3.gif" alt=""></td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -108,7 +116,7 @@
                 <td></td>
             </tr>
             <tr>
-                <td><img id="castillo" src="/img/castillo.jpg" alt=""><img id="monstruo" src="/img/monstruo.gif" alt="">
+                <td><img id="monstruo" src="/img/monstruo.gif" alt="">
                 </td>
                 <td></td>
                 <td></td>
@@ -121,16 +129,12 @@
             </tr>
         </table>
 
-        <div id="btnGroup">
+        <div id="btnGroupDos">
             <div id="btnArr">
-                <button id="arriba">Arriba</button>
-            </div>
-            <div id="btnIzqDer">
-                <button id="izquierda">Izquierda</button>
-                <button id="derecha">Derecha</button>
+                <button id="arriba"><img id="fleArr" src="/img/flecha.png" alt=""></button>
             </div>
             <div id="btnAba">
-                <button id="abajo">Abajo</button>
+                <button id="abajo"><img id="fleAba" src="/img/flecha.png" alt=""></button>
             </div>
         </div>
     </main>
@@ -174,9 +178,13 @@
         </div>
     </section>
 
-    <!-- <footer>
-        <p id="last">© 2022 Adrián Catalán <br>Todos los derechos reservados</p>
-    </footer> -->
+    <audio autoplay="true" loop="true">
+        <source src="/audio/sandStorm.mp3" type="audio/mpeg">
+    </audio>
+
+    <footer>
+        <p id="last">© Adrián Catalán CO LTD 2022 Todos los derechos reservados</p>
+    </footer>
 
     <!-- <script src="/js/particles.min.js"></script>
     <script src="/js/app.js"></script> -->

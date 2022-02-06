@@ -7,6 +7,8 @@
     bottom: 0;
     right: 0;
     z-index: 1;
+    opacity: 1;
+    transform: scaleX(-1);
 }
 
 #monstruo{
@@ -18,4 +20,5 @@
     bottom: 0;
     right: 0;
     transform: scaleX(-1);
+    opacity: 1;
 }
