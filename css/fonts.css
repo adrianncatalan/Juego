@@ -39,6 +39,21 @@
 }
 
 @font-face{
-    font-family: "Giants.ttf";
-    src: url("/fonts/Giants.ttf");
+    font-family: "AnotherDangerDemo.otf";
+    src: url("/fonts/AnotherDangerDemo.otf");
+}
+
+@font-face{
+    font-family: "AnotherDangerSlantedDemo.otf";
+    src: url("/fonts/AnotherDangerSlantedDemo.otf");
+}
+
+@font-face{
+    font-family: "HelpMe.ttf";
+    src: url("/fonts/HelpMe.ttf");
+}
+
+@font-face{
+    font-family: "TrueLies.ttf";
+    src: url("/fonts/TrueLies.ttf");
 }

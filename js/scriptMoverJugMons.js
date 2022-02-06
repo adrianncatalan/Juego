@@ -48,39 +48,39 @@ window.onload = () => {
 
     //---------------------------------------------------------------------------
 
-    if(coordJugador[0] >= 100 || coordJugador[0] <= 700 && coordJugador[1] == 0 && coordJugador[2] >= 0 || coordJugador[2] <= 700 && coordJugador[3] == 0){
+    // if(coordJugador[0] >= 100 || coordJugador[0] <= 700 && coordJugador[1] == 0 && coordJugador[2] >= 0 || coordJugador[2] <= 700 && coordJugador[3] == 0){
             
-            td[1].addEventListener("click", (e) => {
+    //         td[1].addEventListener("click", (e) => {
             
-                mover += 100;
+    //             mover += 100;
 
-                if (coordIzqJug + anchuraJugador <= anchuraTablero - mover) {
+    //             if (coordIzqJug + anchuraJugador <= anchuraTablero - mover) {
             
-                jugador.style.left = mover + "px";
+    //             jugador.style.left = mover + "px";
 
-                }
+    //             }
 
-            });
+    //         });
         
-    } else if(coordJugador[0] >= 0 || coordJugador[0] <= 700 && coordJugador[1] == 0 && coordJugador[2] >= 0 || coordJugador[2] <= 700 && coordJugador[3] == 0){
+    // } else if(coordJugador[0] >= 0 || coordJugador[0] <= 700 && coordJugador[1] == 0 && coordJugador[2] >= 0 || coordJugador[2] <= 700 && coordJugador[3] == 0){
 
-        for (let i = 8; i < 16; i++) {
+    //     for (let i = 8; i < 16; i++) {
             
-            td[i].addEventListener("click", (e) => {
+    //         td[i].addEventListener("click", (e) => {
             
-                mover += 100;
+    //             mover += 100;
 
-                if (coordIzqJug + anchuraJugador <= anchuraTablero - mover) {
+    //             if (coordIzqJug + anchuraJugador <= anchuraTablero - mover) {
             
-                jugador.style.left = mover + "px";
+    //             jugador.style.left = mover + "px";
 
-                }
+    //             }
 
-            });
+    //         });
 
-        }
+    //     }
         
-    } 
+    // } 
 
 // else if(coordJugador[0] >= 0 || coordJugador[0] <= 0 && coordJugador[1] == 0 && coordJugador[2] == 200 && coordJugador[3] == 0){
 
@@ -313,13 +313,13 @@ window.onload = () => {
 
         //
 
-        console.log(coordJugador[0]);
+        // console.log(coordJugador[0]);
 
-        console.log(coordJugador[1]);
+        // console.log(coordJugador[1]);
 
-        console.log(coordJugador[2]);
+        // console.log(coordJugador[2]);
 
-        console.log(coordJugador[3]);
+        // console.log(coordJugador[3]);
 
         // console.log("-------");
 
